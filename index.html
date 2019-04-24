@@ -2,18 +2,92 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Crystal Game!</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        
-        
-        <script src="" async defer></script>
-    </body>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Game!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row title-container">
+
+            Crystals Collector!
+
+        </div>
+
+        <div class="row instructions">
+
+            <p>Each crystal has its own hidden value.</p>
+            <p>Click the correct crystals to match your score</p>
+            <p>with the target score without going over.</p>
+            <p>Values reset randomly at the end of each game.</p>
+
+        </div>
+
+        <div class="row crystals">
+
+            <div class="col-sm-3 blue-crystal crystal">
+                <img src="./assets/Images/blue.png" id="blue">
+            </div>
+
+            <div class="col-sm-3 green-crystal crystal">
+                <img src="./assets/Images/green.png" id="green">
+            </div>
+
+            <div class="col-sm-3 red-crystal crystal">
+                <img src="./assets/Images/red.png" id="red">
+            </div>
+
+            <div class="col-sm-3 yellow-crystal crystal">
+                <img src="./assets/Images/yellow.png" id="yellow">
+            </div>
+
+        </div>
+
+        <div class="row results">
+
+            <div class="col-sm-4 stat-box target-score">
+                <div>Target Score:</div>
+                <div id="targetScore"></div>
+            </div>
+
+            <div class="col-sm-4 stat-box your-score">
+                <div>Your Score:</div>
+                <div id="yourScore"></div>
+            </div>
+
+            <div class="col-sm-4 stat-box win-loss">
+                <div>
+                    Wins:
+                </div>
+                <div id="wins"></div>
+                <div>
+                    Losses:
+                </div>
+                <div id="losses"></div>
+            </div>
+
+        </div>
+
+        <div class="row message">
+            <span id="message"></span>
+        </div>
+
+    </div>
+
+    <script src="assets/JavaScript/game.js" async defer></script>
+</body>
+
 </html>
